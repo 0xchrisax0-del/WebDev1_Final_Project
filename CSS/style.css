@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'AudioWide';
+    src: url("../Fonts/midnight-letters.regular.ttf") format('truetype');
+}
+
+body {
+    font-family: 'AudioWide', sans-serif;
+    cursor: url("../Cursor/cursor(1).cur"), auto;
+}
+
+a, button {
+    cursor: url("../Cursor/cursor(1).cur"), auto;
+}
+
+.header {
+    background-color: #fbfffe;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Ensures absolute centering for the title */
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.logo img {
+    height: 100px; /* Marginally scaled down to match mobile constraints elegantly */
+    width: auto;
+    display: block;
+}
+
+#title {
+    font-size: 36px;
+    text-align: center;
+    margin: 0;
+    color: #1f01b9;
+}
+
+.navContainer {
+    padding: 5px 0;
+    text-align: center;
+}
+
+#navBar a {
+    Color: #1d1d20;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#navBar a:hover {
+    color: #1f01b9;
+    transform: scale(1.15);
+}
+
+.mainContent {
+    background-color: #1d1d20;
+    text-align: center;
+}
