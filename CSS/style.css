@@ -3,9 +3,18 @@
     src: url("../Fonts/midnight-letters.regular.ttf") format('truetype');
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    min-height: 100vh; /* Fallback for older browsers */
+    min-height: 100dvh;
     font-family: 'AudioWide', sans-serif;
     cursor: url("../Cursor/cursor(1).cur"), auto;
+    display: flex;
+    flex-direction: column;
 }
 
 a, button {
@@ -54,5 +63,23 @@ a, button {
 
 .mainContent {
     background-color: #1d1d20;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.mascot-image img{
+    max-width: 50%;
+    height: auto;
+    display: block;
+}
+
+.content {
+    padding: 50px 20px;
+    color: #fbfffe;
+}
+
+.footer {
+    background-color: #fbfffe;
+    padding: 10px;
 }
