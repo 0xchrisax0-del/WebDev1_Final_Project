@@ -64,22 +64,72 @@ a, button {
 .mainContent {
     background-color: #1d1d20;
     display: flex;
-    flex-direction: row;
     flex: 1;
+    align-items: center;       /* vertically centers image + text */
+    justify-content: center;   /* horizontally centers the pair */
+    gap: 60px;
+    padding: 40px 20px;
 }
 
-.mascot-image img{
-    max-width: 50%;
+.mascot-image{
+    flex: 0 1 400px;
+}
+
+.mascot-image img {
+    width: 100%;
+    max-width: 400px;
     height: auto;
     display: block;
 }
 
 .content {
-    padding: 50px 20px;
+    flex: 0 1 480px;
     color: #fbfffe;
+}
+
+.content h2 {
+    font-size: 2.5rem;
+    margin: 0 0 16px;
+    color: #fbfffe;
+}
+
+.content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .footer {
     background-color: #fbfffe;
-    padding: 10px;
+    color: #1d1d20;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #1f01b9;  /* ties in with your title color */
+}
+
+.footer p {
+    margin: 0 0 8px;
+}
+
+/* Stack the image and text on small screens */
+@media (max-width: 700px) {
+    .mainContent {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+.pricing-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.pricing-option {
+    border: 1px solid #1d1d20;
+    padding: 20px; 
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
